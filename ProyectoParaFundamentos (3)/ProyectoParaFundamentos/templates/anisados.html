@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylecompra.css') }}">
+</head>
+<body>
+
+    <div class="product-container">
+        <button class="close"><a href="http://127.0.0.1:5000/index" class="close-link">X</a></button>
+        <div class="product-image">
+            <img src="https://images.rappi.pe/products/1685414464508_1e854e7c-b063-4103-bbd2-fa9369e807f7_Qner2gAzdF.jpg" alt="Imagen de los anisados">
+        </div>
+        <div class="product-info">
+            <div class="product-name">ANISADOS</div>
+            <div class="product-description">Son bebidas alcohólicas elaboradas a partir de la destilación de alcoholes aromatizados con anís, una planta cuyo sabor característico proviene de sus aceites esenciales, como el anetol. Estas bebidas suelen ser dulces y presentan un aroma intenso y un sabor distintivo, que varía dependiendo de la variedad de anís utilizada.</div>
+        </div>
+        <form id="add-to-cart-form" class="add-to-cart-form" method="POST" action="{{ url_for('add_to_cart') }}">
+            <input type="hidden" name="product" value="anisados"> <!-- Nombre del producto -->
+            <label for="quantity" class="quantity-label">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-input">
+            <button type="submit" class="add-to-cart-button">Añadir al Carrito</button>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./Fotos/fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 800px;
+    height: auto;
+    background-color: #001f3f;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 20px;
+    color: #ffd700;
+}
+
+.product-container .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.product-info {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.product-button button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el botón */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Estilo para el enlace dentro del botón */
+.close-link {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700; /* Color dorado */
+    text-decoration: none; /* Eliminar el subrayado del enlace */
+    transition: transform 0.2s, color 0.3s;
+}
+
+/* Hover y otros efectos para el enlace */
+.close-link:hover {
+    color: #FF6347; /* Cambia el color a rojo claro al pasar el ratón */
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.close-link:focus {
+    outline: none; /* Elimina el borde al hacer clic */
+}
+
+.close-link:active {
+    transform: scale(0.9); /* Disminuye el tamaño al hacer clic */
+}
+.add-to-cart-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los elementos */
+    margin-top: 20px;
+}
+
+.quantity-label {
+    font-size: 1.2em;
+    color: #FFD700; /* Color dorado */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    border: 2px solid #FFD700; /* Borde dorado para que combine con el resto del diseño */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+    background-color: #FFF; /* Fondo blanco para buen contraste */
+}
+
+.add-to-cart-button {
+    background-color: #007BFF; /* Azul brillante para resaltar */
+    color: #FFFFFF; /* Texto blanco para mejor legibilidad */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandar ligeramente al hacer hover */
+}

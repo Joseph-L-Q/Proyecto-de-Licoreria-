@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LICORERÍA RADIANTE UNIVERSO</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>LICORERÍA RADIANTE UNIVERSO</h1>
+    <h2>Bienvenido, {{ username }} a LICORERÍA RADIANTE UNIVERSO</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li style="color: green;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="GET" action="{{ url_for('buscar') }}">
+        <input type="text" name="query" placeholder="Buscar productos..." required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <div class="container">
+        <div class="card">
+            <img src="https://pngimg.com/d/whisky_PNG90.png" alt="Whisky" class="imagen-redimensionada">
+            <h3>Whisky<br></h3>
+            <a class="button" href="http://127.0.0.1:5000/whisky">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://dojiw2m9tvv09.cloudfront.net/69246/product/flordecana50801.png" alt="Ron" class="imagen-redimensionada">
+            <h3>Ron</h3>
+            <a class="button" href="http://127.0.0.1:5000/ron">Ver más</a>
+        </div>
+
+        <div class="card">
+                <img src="https://static.vecteezy.com/system/resources/previews/033/888/749/non_2x/red-wine-bottle-with-wine-grapes-with-ai-generated-free-png.png" alt="Vino">
+            <h3>Vino</h3>
+            <a class="button" href="http://127.0.0.1:5000/vino">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://static.vecteezy.com/system/resources/previews/033/647/442/non_2x/champagne-in-the-ice-with-ai-generated-free-png.png" alt="Champagne">
+            <h3>Champagne</h3>
+            <a class="button" href="http://127.0.0.1:5000/champagne">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://res.cloudinary.com/riqra/image/upload/w_656,h_656,c_limit,q_auto,f_auto/v1652997987/sellers/capo-di-pasta/products/fn0t9ofivh9mlbpe8fyn.png" alt="Pisco">
+            <h3>Pisco</h3>
+            <a class="button" href="http://127.0.0.1:5000/pisco">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/044/651/036/small_2x/a-gin-and-tonic-with-lime-and-lemon-served-on-the-rocks-png.png" alt="Gin">
+            <h3>Gin</h3>
+            <a class="button" href="http://127.0.0.1:5000/gin">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://imgmedia.larepublica.pe/640x376/larepublica/migration/images/CHW6L6ZDKFB5DKYFNPH24PLOIM.webp" alt="Cerveza">
+            <h3>Cerveza</h3>
+            <a class="button" href="http://127.0.0.1:5000/cerveza">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://licoreriasunidas.com/wp-content/uploads/2022/03/macerados-img-1.png" alt="Macerados">
+            <h3>Macerados</h3>
+            <a class="button" href="http://127.0.0.1:5000/macerados">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.rappi.pe/products/1685414464508_1e854e7c-b063-4103-bbd2-fa9369e807f7_Qner2gAzdF.jpg" alt="Anisados">
+            <h3>Anisados</h3>
+            <a class="button" href="http://127.0.0.1:5000/anisados">Ver más</a>
+        </div>
+
+        <div class="card">
+            <img src="https://png.pngtree.com/png-clipart/20210418/original/pngtree-three-cups-of-cocktail-beverages-png-image_6240893.jpg" alt="Cocteles">
+            <h3>Cócteles</h3>
+            <a class="button" href="http://127.0.0.1:5000/cocteles">Ver más</a>
+    </div>
+    <div class="checkout-button-container" style="margin-top: 30px; text-align: center; margin-bottom: 30px;">
+        <a href="{{ url_for('checkout') }}" class="checkout-button">Finalizar Compra</a>
+    </div>
+</body>
+</html>

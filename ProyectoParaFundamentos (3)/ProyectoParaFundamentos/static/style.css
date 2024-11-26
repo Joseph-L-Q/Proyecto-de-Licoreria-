@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./Fotos/Fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #FFD700; /* Color dorado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: flex; /* Cambié a flex para una mejor distribución */
+    flex-wrap: wrap; /* Permite que las tarjetas se distribuyan en varias filas si es necesario */
+    gap: 20px; /* Espacio entre cada tarjeta */
+    justify-content: center; /* Centra todas las tarjetas horizontalmente */
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #2a3b5c;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s;
+    width: 200px; /* Fijo el ancho de cada tarjeta */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    color: #FFD700;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    color: #ffffff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #3498db;
+    transform: scale(1.05); /* Añadido efecto de agrandamiento */
+}
+
+#Registro {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    color: #ffffff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Estilo para el input de búsqueda */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #444; /* Borde oscuro para combinar */
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9; /* Fondo claro para resaltar el texto */
+}
+
+/* Botón de búsqueda */
+button[type="submit"] {
+    background-color: #007BFF; /* Azul similar al botón "Ver más" */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px; /* Espacio entre el input y el botón */
+    transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+}
+
+/* Efecto hover para el botón */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más oscuro para efecto hover */
+    transform: scale(1.05); /* Efecto de agrandar ligeramente */
+}
+
+/* Efecto de foco en el campo de texto */
+input[type="text"]:focus {
+    border-color: #007BFF; /* Resaltar el borde cuando se selecciona */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto de resplandor */
+}
+
+h2 {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para dar contraste */
+    color: #FFD700; /* Color dorado para que combine con el título principal */
+    padding: 15px 25px; /* Añadir más espacio alrededor del mensaje para darle aire */
+    font-size: 1.8em; /* Aumentar el tamaño de la fuente para destacar más */
+    border-radius: 15px; /* Bordes redondeados para un look más amigable */
+    text-align: center; /* Alinear el texto al centro */
+    max-width: 85%; /* Limitar el ancho para evitar que el texto se extienda demasiado */
+    margin: 20px auto; /* Centramos el mensaje horizontalmente y añadimos un margen superior/inferior */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada para darle más profundidad */
+    font-weight: bold; /* Hacer el texto más llamativo */
+    letter-spacing: 1px; /* Espaciado de letras para mejorar la legibilidad */
+    text-transform: uppercase; /* Texto en mayúsculas para un aspecto más fuerte */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra en el texto para mejorar el contraste */
+}
+
+.checkout-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.checkout-button {
+    background-color: #28a745; /* Verde para representar la acción de finalizar */
+    color: #fff; /* Texto blanco */
+    padding: 15px 30px; /* Añadir espacio interior */
+    font-size: 1.2em; /* Tamaño de fuente un poco más grande */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones */
+}
+
+.checkout-button:hover {
+    background-color: #218838; /* Color verde más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+}
+.flash-messages {
+    position: fixed; /* Fijo para que siempre esté visible */
+    bottom: 20px; /* Posicionar en la parte inferior */
+    right: 20px; /* Posicionar hacia la derecha */
+    background-color: #28a745; /* Fondo verde para indicar éxito */
+    color: #fff; /* Texto blanco */
+    padding: 15px 20px; /* Añadir espacio alrededor del mensaje */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añadir sombra para destacar */
+    font-size: 1em; /* Tamaño de fuente moderado */
+    font-weight: bold; /* Texto en negrita para resaltar el mensaje */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+    opacity: 0.95; /* Ligera transparencia */
+    text-align: center; /* Centrar el texto */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Añadir una transición suave */
+}
+
+.flash-messages:hover {
+    opacity: 1; /* Hacerlo totalmente opaco al pasar el ratón */
+    transform: scale(1.05); /* Hacer que el mensaje crezca un poco */
+}

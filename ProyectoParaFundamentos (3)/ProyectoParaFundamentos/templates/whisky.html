@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylecompra.css') }}">
+</head>
+<body>
+
+    <div class="product-container">
+        <button class="close"><a href="http://127.0.0.1:5000/index" class="close-link">X</a></button>
+        <div class="product-image">
+            <img src="https://pngimg.com/d/whisky_PNG90.png" alt="Imagen del whisky">
+        </div>
+        <div class="product-info">
+            <div class="product-name">WHISKY</div>
+            <div class="product-description">Es una bebida alcohólica y espirituosa obtenida por la destilación del mosto obtenido de la malta fermentada a partir de cereales como cebada, trigo, centeno y maíz, y su posterior añejamiento en barriles de madera, tradicionalmente de roble blanco.</div>
+        </div>
+        <form id="add-to-cart-form" class="add-to-cart-form" method="POST" action="{{ url_for('add_to_cart') }}">
+            <input type="hidden" name="product" value="whisky"> <!-- Nombre del producto -->
+            <label for="quantity" class="quantity-label">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-input">
+            <button type="submit" class="add-to-cart-button">Añadir al Carrito</button>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylecompra.css') }}">
+</head>
+<body>
+
+    <div class="product-container">
+        <button class="close"><a href="http://127.0.0.1:5000/index" class="close-link">X</a></button>
+        <div class="product-image">
+            <img src="https://static.vecteezy.com/system/resources/previews/033/888/749/non_2x/red-wine-bottle-with-wine-grapes-with-ai-generated-free-png.png" alt="Imagen del vino">
+        </div>
+        <div class="product-info">
+            <div class="product-name">VINO</div>
+            <div class="product-description">Es una bebida alcohólica obtenida de la fermentación del jugo de uva, principalmente de la especie Vitis vinifera. Su elaboración incluye etapas como la cosecha de las uvas, prensado, fermentación, maduración y, en algunos casos, envejecimiento en barricas o botellas.</div>
+        </div>
+        <form id="add-to-cart-form" class="add-to-cart-form" method="POST" action="{{ url_for('add_to_cart') }}">
+            <input type="hidden" name="product" value="vino"> <!-- Nombre del producto -->
+            <label for="quantity" class="quantity-label">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-input">
+            <button type="submit" class="add-to-cart-button">Añadir al Carrito</button>
+        </form>
+
+    </div>
+</body>
+</html>

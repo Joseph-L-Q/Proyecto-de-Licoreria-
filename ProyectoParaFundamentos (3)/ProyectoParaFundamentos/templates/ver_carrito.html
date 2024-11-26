@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Carrito de Compras de {{ session['username'] }}</h1>
+    {% if carrito %}
+        <ul>
+            {% for producto, cantidad in carrito.items() %}
+                <li>{{ producto }}: {{ cantidad }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay productos en el carrito.</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Volver a la tienda</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylecompra.css') }}">
+</head>
+<body>
+
+    <div class="product-container">
+        <button class="close"><a href="http://127.0.0.1:5000/index" class="close-link">X</a></button>
+        <div class="product-image">
+            <img src="https://imgmedia.larepublica.pe/640x376/larepublica/migration/images/CHW6L6ZDKFB5DKYFNPH24PLOIM.webp" alt="Imagen de la cerveza">
+        </div>
+        <div class="product-info">
+            <div class="product-name">CERVEZA</div>
+            <div class="product-description">La cerveza es una de las bebidas alcohólicas más antiguas y consumidas en el mundo, elaborada a partir de la fermentación de cereales como cebada malteada, agua, lúpulo y levadura. Su proceso incluye la maceración del grano para extraer azúcares, la fermentación de estos azúcares por acción de la levadura y, en muchos casos, un período de maduración para perfeccionar su sabor.</div>
+        </div>
+        <form id="add-to-cart-form" class="add-to-cart-form" method="POST" action="{{ url_for('add_to_cart') }}">
+            <input type="hidden" name="product" value="cerveza"> <!-- Nombre del producto -->
+            <label for="quantity" class="quantity-label">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-input">
+            <button type="submit" class="add-to-cart-button">Añadir al Carrito</button>
+        </form>
+
+    </div>
+</body>
+</html>

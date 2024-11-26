@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylecompra.css') }}">
+</head>
+<body>
+
+    <div class="product-container">
+        <button class="close"><a href="http://127.0.0.1:5000/index" class="close-link">X</a></button>
+        <div class="product-image">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/044/651/036/small_2x/a-gin-and-tonic-with-lime-and-lemon-served-on-the-rocks-png.png" alt="Imagen del gin">
+        </div>
+        <div class="product-info">
+            <div class="product-name">GIN</div>
+            <div class="product-description">El gin (ginebra) es una bebida alcohólica destilada que se caracteriza por su sabor predominante a enebro (Juniperus communis), combinado con una variedad de botánicos como cítricos, especias y hierbas. Su base se obtiene de la destilación de granos como cebada, maíz o centeno, a la que se infunden los botánicos durante el proceso de producción.</div>
+        </div>
+        <form id="add-to-cart-form" class="add-to-cart-form" method="POST" action="{{ url_for('add_to_cart') }}">
+            <input type="hidden" name="product" value="gin"> <!-- Nombre del producto -->
+            <label for="quantity" class="quantity-label">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-input">
+            <button type="submit" class="add-to-cart-button">Añadir al Carrito</button>
+        </form>
+
+    </div>
+</body>
+</html>

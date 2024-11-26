@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='checkout.css') }}">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="floating-window">
+        <h1>Gracias por su preferencia, {{ nombre }}!</h1>
+        <button class="back-button" onclick="window.location.href='{{ url_for('index') }}'">Volver a la página principal</button>
+    </div>
+</body>
+</html>

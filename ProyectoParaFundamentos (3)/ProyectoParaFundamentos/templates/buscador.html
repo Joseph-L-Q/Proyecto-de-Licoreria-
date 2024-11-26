@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bienvenido a Licorería Radiante Universo</h1>
+
+    <form method="GET" action="{{ url_for('buscar') }}">
+        <input type="text" name="query" placeholder="Buscar productos..." required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if search_query %}
+        <h2>Mostrando resultados para: {{ search_query }}</h2>
+    {% endif %}
+</body>
+</html>
